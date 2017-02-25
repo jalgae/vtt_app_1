@@ -56,7 +56,7 @@ jQuery(function ($) {
         var grp6 = document.getElementById("input_26_30").value;
         var grp7 = document.getElementById("input_26_29").value;
 
-        $.post('//188.166.233.112/lq/api', {
+        $.post('http://188.166.233.112/lq/api', {
             "1_q_a": (q1a) ? q1a : "",
             "1_q_b": (q1b) ? q1b : "",
             "1_q_c": (q1c) ? q1c : "",

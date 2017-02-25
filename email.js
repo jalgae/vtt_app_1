@@ -14,6 +14,36 @@ let _transporter = _mailer.createTransport({
 
 var email = {};
 
+
+email.sendMultiFiles = function (data) {
+    var attach = [];
+    for (var i = 0; i < data.length; i++) {
+        attach.push({
+            filename: data[i].filename,
+            path: `${__dirname}/output/${data[i].filename}.docx`
+        });
+    }
+
+    var message = {
+        from: 'Logo Questionnaire <vtt.app.1@gmail.com>',
+        to: 'joenil@influex.com',
+        subject: 'Logo Questionnaire Document',
+        text: 'Attached Files are the Logo Questionnaire survey results.',
+        attachments: attach
+    };
+
+    _transporter.sendMail(message, (error, info)=> {
+        if (error) {
+            console.log('Error occurred', error);
+            console.log(error.message);
+            return;
+        }
+        console.log('Message sent successfully!');
+        console.log('Server responded with "%s"', info.response);
+        transporter.close();
+    });
+}
+
 email.send = function (file, name) {
     let message = {
         from: 'Logo Questionnaire <vtt.app.1@gmail.com>',

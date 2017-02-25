@@ -9,14 +9,14 @@
 
 <body>
   
-  <form action="#" method="POST">
+  <form action="/lq/form/api" method="POST" enctype="multipart/form-data">
     <div class="row col-lg-12 col-md-12 col-sm-12 custom-header">
         <h1>VTT API</h1>
         <p>Upload the Excel file here</p>
     </div>
     <div class="row col-lg-12 col-md-12 col-sm-12 custom-file-upload">
         <!--<label for="file">File: </label>--> 
-        <input type="file" id="file" name="myfiles[]" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
+        <input type="file" id="file" name="excelfile" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
     </div>
     <div class="row col-lg-12 col-md-12 col-sm-12 submit-file-upload">
         <button type="submit" class="btn btn-success btn-lg">Submit</button>

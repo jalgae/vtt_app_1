@@ -38,9 +38,13 @@ _app.post('/lq/api', function (req, res) {
     _gen.proc_api(req, res);
 });
 
+_app.get('/success', function (req, res) {
+    res.sendFile(__dirname + '/public/success/index.html');
+});
+
 var _server = require('http').Server(_app);
 
-var port = 80;
+var port = 9100;
 var ip = _internalIp.v4();
 
 _server.listen(port, function (err) {
