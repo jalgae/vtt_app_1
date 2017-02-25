@@ -19,7 +19,7 @@ email.sendMultiFiles = function (data) {
     var attach = [];
     for (var i = 0; i < data.length; i++) {
         attach.push({
-            filename: data[i].filename,
+            filename: `${data[i].filename}.docx`,
             path: `${__dirname}/output/${data[i].filename}.docx`
         });
     }
