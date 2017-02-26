@@ -96,8 +96,9 @@ function proc_data (data) {
 _gen.proc_excel = function (req, res) {
 
     if (!req.files) {
-        return res.redirect("/");
-    }
+        res.redirect("/");
+        return; 
+    } 
 
     var excelfile = req.files.excelfile;
     var filename = req.files.excelfile.name;
@@ -105,7 +106,8 @@ _gen.proc_excel = function (req, res) {
 
     excelfile.mv(filedir, function (err) {
         if (err) {
-            return res.redirect("/");
+            res.redirect("/");
+            return;
         }
         var wb = new _excel.Workbook();
         var data = [];
@@ -146,6 +148,7 @@ _gen.proc_excel = function (req, res) {
         });
 
         res.redirect('/success');
+        return;
     });   
 }
 
