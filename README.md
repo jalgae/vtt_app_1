@@ -8,5 +8,5 @@ From that data the application will generate word document with specific format 
 ##To start with Project
     * Make sure you have installed Node.js a Javascript runtime built on Chrome's V8 Javascript engine. The latest stable version is v6.10.0.
     * Clone the Project
-    * Got to the directory and execute the command `npm install`
+    * Go to the directory using terminal and execute the command `npm install`
     * Execute the command `npm run start` or `node server`
