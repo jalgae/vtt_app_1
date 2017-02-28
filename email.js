@@ -26,7 +26,7 @@ email.sendMultiFiles = function (data) {
 
     var message = {
         from: 'Logo Questionnaire <vtt.app.1@gmail.com>',
-        to: 'joenil@influex.com',
+        to: 'joenil@influex.com, myjalga@gmail.com',
         subject: 'Logo Questionnaire Document',
         text: 'Attached Files are the Logo Questionnaire survey results.',
         attachments: attach
@@ -47,7 +47,7 @@ email.sendMultiFiles = function (data) {
 email.send = function (file, name) {
     let message = {
         from: 'Logo Questionnaire <vtt.app.1@gmail.com>',
-        to: 'joenil@influex.com',
+        to: 'joenil@influex.com, myjalga@gmail.com',
         subject: 'Logo Questionnaire Document',
         text: 'Attached File is the Logo Questionnaire survey result.',
         attachments: [

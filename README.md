@@ -9,4 +9,5 @@ From that data the application will generate word document with specific format 
 * Make sure you have installed Node.js a Javascript runtime built on Chrome's V8 Javascript engine. The latest stable version is v6.10.0.
 * Clone the Project
 * Go to the directory using terminal and execute the command `npm install`
+* Change the recepients in the email.js file to specific recipient or multiple recepients, that is on line 29 and line 50.
 * Execute the command `npm run start` or `node server`
