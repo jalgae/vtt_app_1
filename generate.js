@@ -228,7 +228,7 @@ _gen.proc_api = function (req, res) {
     var company = com;
     com_name = company.replace(/ /g, '_');
     var tdate = new Date();
-    com_name = `${com_name}-${tdate.getFullYear()}-${tdate.getUTCMonth()}-${tdate.getUTCDate()}`
+    com_name = `${com_name}-${tdate.getFullYear()}-${(tdate.getUTCMonth() + 1)}-${tdate.getUTCDate()}`
 
     var opts = {};
     opts.centered = true;
