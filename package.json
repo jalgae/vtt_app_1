@@ -12,6 +12,7 @@
   "dependencies": {
     "body-parser": "^1.16.1",
     "docxtemplater": "^3.0.3",
+    "docxtemplater-image-module": "^3.0.2",
     "exceljs": "^0.3.0",
     "express": "^4.14.1",
     "express-fileupload": "^0.1.1",
