@@ -260,8 +260,13 @@ _gen.proc_api = function (req, res) {
     var slider6 = ( q["grp_6"] ) ? String(q["grp_6"]) : '50';
     var slider7 = ( q["grp_7"] ) ? String(q["grp_7"]) : '50';
 
+    var pre = '<w:p><w:r><w:t>';
+    var post = '</w:t></w:r></w:p>';
+
     var q1a = ( q["1_q_a"] ) ? String(q["1_q_a"]) : '';
-    q1a = q1a.split('\n');
+    q1a = pre + q1a.split('\n');
+
+
 
     var q1b = ( q["1_q_b"] ) ? String(q["1_q_b"]) : '';
     q1b = q1b.split('\n');
