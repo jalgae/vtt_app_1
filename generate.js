@@ -259,21 +259,56 @@ _gen.proc_api = function (req, res) {
     var slider5 = ( q["grp_5"] ) ? String(q["grp_5"]) : '50';
     var slider6 = ( q["grp_6"] ) ? String(q["grp_6"]) : '50';
     var slider7 = ( q["grp_7"] ) ? String(q["grp_7"]) : '50';
-    
+
+    var q1a = ( q["1_q_a"] ) ? String(q["1_q_a"]) : '';
+    q1a = q1a.split('\n');
+
+    var q1b = ( q["1_q_b"] ) ? String(q["1_q_b"]) : '';
+    q1b = q1b.split('\n');
+
+    var q1c = ( q["1_q_c"] ) ? String(q["1_q_c"]) : '';
+    q1c = q1c.split('\n');
+
+    var q1d = ( q["1_q_d"] ) ? String(q["1_q_d"]) : '';
+    q1d = q1d.split('\n');
+
+    var q1e = ( q["1_q_e"] ) ? String(q["1_q_e"]) : '';
+    q1e = q1e.split('\n');
+
+    var q1f = ( q["1_q_f"] ) ? String(q["1_q_f"]) : '';
+    q1f = q1f.split('\n');
+
+    var q2 = ( q["2_q"] ) ? String(q["2_q"]) : '';
+    q2 = q2.split('\n');
+
+    var q3 = ( q["3_q"] ) ? String(q["3_q"]) : '';
+    q3 = q3.split('\n');
+
+    var q4 = ( q["4_q"] ) ? String(q["4_q"]) : '';
+    q4 = q4.split('\n');
+
+    var q5 = ( q["5_q"] ) ? String(q["5_q"]) : '';
+    q5 = q5.split('\n');
+
+    var q6 = ( q["6_q"] ) ? String(q["6_q"]) : '';
+    q6 = q6.split('\n');
+
+    var q7 = ( q["7_q"] ) ? String(q["7_q"]) : '';
+    q7 = q7.split('\n');
 
     doc.setData({
-        "1_q_a": ( q["1_q_a"] ) ? String(q["1_q_a"]) : '',
-        "1_q_b": ( q["1_q_b"] ) ? String(q["1_q_b"]) : '',
-        "1_q_c": ( q["1_q_c"] ) ? String(q["1_q_c"]) : '',
-        "1_q_d": ( q["1_q_d"] ) ? String(q["1_q_d"]) : '',
-        "1_q_e": ( q["1_q_e"] ) ? String(q["1_q_e"]) : '',
-        "1_q_f": ( q["1_q_f"] ) ? String(q["1_q_f"]) : '',
-        "2_q": ( q["2_q"] ) ? String(q["2_q"]) : '',
-        "3_q": ( q["3_q"] ) ? String(q["3_q"]) : '',
-        "4_q": ( q["4_q"] ) ? String(q["4_q"]) : '',
-        "5_q": ( q["5_q"] ) ? String(q["5_q"]) : '',
-        "6_q": ( q["6_q"] ) ? String(q["6_q"]) : '',
-        "7_q": ( q["7_q"] ) ? String(q["7_q"]) : '',
+        "1_q_a": q1a.map((txt)=>{return {text: txt}}),
+        "1_q_b": q1b.map((txt)=>{return {text: txt}}),
+        "1_q_c": q1c.map((txt)=>{return {text: txt}}),
+        "1_q_d": q1d.map((txt)=>{return {text: txt}}),
+        "1_q_e": q1e.map((txt)=>{return {text: txt}}),
+        "1_q_f": q1f.map((txt)=>{return {text: txt}}),
+        "2_q": q2.map((txt)=>{return {text: txt}}),
+        "3_q": q3.map((txt)=>{return {text: txt}}),
+        "4_q": q4.map((txt)=>{return {text: txt}}),
+        "5_q": q5.map((txt)=>{return {text: txt}}),
+        "6_q": q6.map((txt)=>{return {text: txt}}),
+        "7_q": q7.map((txt)=>{return {text: txt}}),
         // "grp_1": ( q["grp_1"] ) ? String(q["grp_1"]) : '',
         // "grp_2": ( q["grp_2"] ) ? String(q["grp_2"]) : '',
         // "grp_3": ( q["grp_3"] ) ? String(q["grp_3"]) : '',
